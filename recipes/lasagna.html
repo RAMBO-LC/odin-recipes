@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lasagna</title>
+</head>
+<body>
+    <a href="../index.html">Home</a>
+    <h1>Lasagna</h1>
+    <img src="https://www.allrecipes.com/thmb/yZytTsS2hR-452u5GoEOuidg-hw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/237430-creamy-penne-pasta-primavera-VAT-Beauty-4x3-ea8cd2ad74bb4d91975289aae9990f92.jpg" alt="Lasagna" width="400">
+    
+    <h2>Description</h2>
+    <p>Lasagna is a classic Italian dish featuring layers of pasta sheets, rich meat sauce, and creamy béchamel or ricotta cheese. This comforting baked pasta dish is perfect for family dinners and special occasions.</p>
+    <p>This traditional recipe combines tender pasta layers with a savory meat sauce made from ground beef and tomatoes, creating a delicious and satisfying meal that is sure to impress your guests.</p>
+    
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 lb ground beef</li>
+        <li>1 onion, diced</li>
+        <li>4 cloves garlic, minced</li>
+        <li>28 oz canned crushed tomatoes</li>
+        <li>6 oz tomato paste</li>
+        <li>2 cups ricotta cheese</li>
+        <li>2 cups mozzarella cheese, shredded</li>
+        <li>1/2 cup parmesan cheese, grated</li>
+        <li>1 egg</li>
+        <li>Salt and pepper to taste</li>
+        <li>1 lb lasagna noodles</li>
+        <li>2 tablespoons olive oil</li>
+    </ul>
+    
+    <h2>Steps</h2>
+    <ol>
+        <li>Preheat oven to 375°F (190°C).</li>
+        <li>Cook lasagna noodles according to package directions. Drain and set aside.</li>
+        <li>In a large pot, heat olive oil and sauté diced onion until softened.</li>
+        <li>Add minced garlic and cook for 1 minute until fragrant.</li>
+        <li>Add ground beef and cook until browned, breaking it up as it cooks.</li>
+        <li>Stir in crushed tomatoes and tomato paste. Simmer for 20 minutes.</li>
+        <li>In a bowl, combine ricotta, mozzarella, parmesan, egg, salt, and pepper.</li>
+        <li>Spread a thin layer of meat sauce on the bottom of a 9x13 baking dish.</li>
+        <li>Layer noodles, then ricotta mixture, then meat sauce. Repeat layers until all ingredients are used.</li>
+        <li>End with a layer of sauce and top with remaining mozzarella.</li>
+        <li>Cover with foil and bake for 25 minutes. Remove foil and bake for an additional 15 minutes until cheese is bubbly.</li>
+        <li>Let rest for 10 minutes before serving.</li>
+    </ol>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream:       #fdf6ec;
+  --parchment:   #f0e0c4;
+  --rust:        #b94a2c;
+  --rust-dark:   #8b3220;
+  --rust-light:  #e8795a;
+  --brown:       #4a2e1a;
+  --gold:        #c9933a;
+  --gold-light:  #e8b96a;
+  --text:        #2e1a0e;
+  --text-muted:  #7a5c44;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--gold-light);
+  background-image:
+    radial-gradient(ellipse at 10% 0%, rgba(201,147,58,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 90% 100%, rgba(185,74,44,0.10) 0%, transparent 60%);
+  color: var(--text);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+
+/* ── Home Link ── */
+a[href] {
+  display: inline-block;
+  margin: 1.8rem 0 0 2.2rem;
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rust);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s;
+}
+
+a[href]::before {
+  content: '←';
+  margin-right: 0.45em;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+a[href]:hover {
+  color: var(--rust-dark);
+}
+
+a[href]:hover::before {
+  transform: translateX(-4px);
+}
+
+/* ── Page Wrapper ── */
+body > *:not(a) {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ── Title ── */
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--rust-dark);
+  text-align: center;
+  margin-top: 2.4rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--rust-light));
+  border-radius: 2px;
+  margin: 0.9rem auto 0;
+}
+
+/* ── Hero Image ── */
+img {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 2.4rem auto 0;
+  box-shadow:
+    0 2px 0 var(--gold),
+    0 6px 32px rgba(74,46,26,0.22);
+  filter: sepia(8%) saturate(1.1);
+  transition: filter 0.3s;
+}
+
+img:hover {
+  filter: sepia(0%) saturate(1.15);
+}
+
+/* ── Section Headings ── */
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--rust);
+  margin-top: 3.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--parchment);
+  position: relative;
+}
+
+h2::before {
+  content: '§';
+  font-style: normal;
+  color: var(--gold);
+  margin-right: 0.5em;
+  opacity: 0.7;
+}
+
+/* ── Description Paragraphs ── */
+p {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+
+p:first-of-type::first-letter {
+  float: left;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.6rem;
+  line-height: 0.82;
+  color: var(--rust);
+  margin-right: 0.1em;
+  margin-top: 0.08em;
+}
+
+/* ── Ingredients List ── */
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.55rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  font-size: 0.97rem;
+  color: var(--text);
+  padding: 0.45rem 0.6rem;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+
+ul li::before {
+  content: '✦';
+  color: var(--gold);
+  font-size: 0.6rem;
+  flex-shrink: 0;
+  position: relative;
+  top: -1px;
+}
+
+ul li:hover {
+  background: rgba(201,147,58,0.08);
+}
+
+/* ── Steps List ── */
+ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: steps;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 3.5rem;
+}
+
+ol li {
+  counter-increment: steps;
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  padding: 1rem 1.2rem;
+  background: rgba(240,224,196,0.4);
+  border-left: 3px solid var(--parchment);
+  border-radius: 0 4px 4px 0;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+ol li::before {
+  content: counter(steps, decimal-leading-zero);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  line-height: 1.6;
+  min-width: 2em;
+}
+
+ol li:hover {
+  border-left-color: var(--rust-light);
+  background: rgba(240,224,196,0.65);
+}
+
+/* ── Decorative footer spacing ── */
+body::after {
+  content: '';
+  display: block;
+  height: 4rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 560px) {
+  a[href] {
+    margin-left: 1.2rem;
+  }
+
+  body > *:not(a) {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  ul {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    height: 240px;
+  }
+}
+    
+
+</style>
+</html> 
